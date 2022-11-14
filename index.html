@@ -13,8 +13,7 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 15px; text-align: center; background: hsl(228, 45%, 44%);}
-    .attribution a { color: hsl(228, 17%, 94%); }
+    
     * {
   box-sizing: border-box;
   border: 0px solid red;
@@ -23,7 +22,11 @@
   font-family: 'Inter', sans-serif;
   
 }
-   
+html, body {
+    margin: 0;
+    min-height: 100%;
+    
+}
    [class*="col-"] {
   float: left;
   padding: 15px;
@@ -49,13 +52,10 @@
 @media only screen and (max-width: 700px) {
   /* For mobile phones: */
   
-  [class*="col-"] {
-    width: 100vw;
-  }
+ 
 }
 .rootDiv{
-  overflow-x: hidden;
-  overflow-y: hidden;
+  
   padding:10px
 }
 .menu-mobile{
@@ -79,11 +79,15 @@
 .nav-items ul li a{
   text-decoration: none;
 }
+.nav-items ul li a:hover{
+  color:#F15D51
+}
 .nav-items ul li::after{
   content: '';
   width: 0%;
   height: 2px;
   background: #f44336;
+  
   display: block;
   margin: auto;
   transition: 0.5s;
@@ -178,16 +182,25 @@
   width: 100px;
   
 }
+.footer{
+  position: sticky;
+  bottom: 0;
+  width: 100vw;
+}
+.attribution { font-size: 15px; text-align: center; background: hsl(228, 45%, 44%);}
+    .attribution a { color: hsl(228, 17%, 94%); }
 @media(max-width:700px){
+  [class*="col-"] {
+    width: 100vw;
+  }
  .body{
   height: 100vh;
-  overflow-x: hidden;
+  
   
   
  }
  .rootDiv{
-  overflow-x: hidden;
-  overflow-y: auto;
+ 
   border: 0px solid #f44336;
   padding: 0px;
   
@@ -235,6 +248,7 @@
    
     margin-top: 32px;
     max-height: 100vh;
+   
   }
   .rowTwo .col-3{
     margin-top: 64px;
@@ -260,107 +274,126 @@
     bottom: 0;
     
   }
+ 
   .last-flex{
   display: flex;
   gap:32px;
   flex-direction: column;
   
 }
+.footer{
+  margin-top: 15px;
+  position: fixed;
+  bottom: 0;
+  
+}
 
 }
   </style>
 </head>
-<body>
+<body style="border: 1px solid green;">
   <div class="rootDiv" style="position: relative;">
-    <div class="row"style="display: flex;">
-      <div class="col-1"><img src="./assets/images/logo.svg" width="64.09px" height="39.9px"/></div>
-      <div class="nav-items" id="nav-items">
-        <div class="menu-close" onclick="hideMenu()"><img src="./assets/images/icon-menu-close.svg"/></div>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">New</a></li>
-          <li><a href="#">Popular</a></li>
-          <li><a href="#">Trending</a></li>
-          <li><a href="#">Categories</a></li>
-        </ul>
-      </div>
-      <div class="menu-mobile"  onclick="showMenu()">
-        <img src="./assets/images/icon-menu.svg"/>
-      </div>
-    </div>
-    <div class="rowTwo">    
-      <div class="col-9">      
-        <div class="row-two">
-          <div class="col-12" style="padding: 0;">
-            <img src="./assets/images/image-web-3-desktop.jpg" style="max-width: 100%;max-height: 100%;"/>
-          </div>
-          <div class="col-12 mobile" style="padding: 0;">
-            <img src="./assets/images/image-web-3-mobile.jpg" style="max-width: 100%;max-height: 100%;"/>
-          </div>
-          <div class="col-6 heading" style="font-size: xx-large;color: #00001A;">
-            <b>The Bright Future of Web 3.0?</b>
-          </div>
-          <div class="col-6 description" style="position: relative;color: #5E607A">
-            <div>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-            But is it really fulfilling its promise?</div>
-            <br/>
-            <button >READ MORE</button>
-          </div>
+
+     <div class="row"style="display: flex;">
+        <div class="col-1"><img src="./assets/images/logo.svg" width="64.09px" height="39.9px"/></div>
+        <div class="nav-items" id="nav-items">
+          <div class="menu-close" onclick="hideMenu()"><img src="./assets/images/icon-menu-close.svg"/></div>
+          <ul id="unordered-items-list">
+            <li ><a href="#">Home</a></li>
+            <li ><a href="#">New</a></li>
+            <li ><a href="#">Popular</a></li>
+            <li ><a href="#">Trending</a></li>
+            <li ><a href="#">Categories</a></li>
+          </ul>
+        </div>
+        <div class="menu-mobile"  onclick="showMenu()">
+          <img src="./assets/images/icon-menu.svg"/>
         </div>
       </div>
-      <div class="col-3">
-        <div style="margin-bottom: 34px;"><b style="color: #E9AA52;font-size: xx-large;">New</b></div>
-        <div >
-          <div class="newHeading" >Hydrogen VS Electric Cars</div>
-          <div class="newDesc" >Will hydrogen-fueled cars ever catch up to EVs?</div>
-        </div>
-        <div style="border: 1px solid #5E607A;height: 0;"></div>
-        <div>
-          <div class="newHeading">The Downsides of AI Artistry</div>
-          <div class="newDesc">What are the possible adverse effects of on-demand AI image generation?</div>
-        </div>
-        <div style="border: 1px solid #5E607A;;"></div>
-        <div>
-          <div class="newHeading">Is VC Funding Drying Up?</div>
-          <div class="newDesc">Private funding by VC firms is down 50% YOY. We take a look at what that means.</div>
-        </div>
-      </div>
-      <div class="col-12 lastColumn">
-        <div class="last-flex">
-          <div class="lastFlexOne">
-            <div class="imageDiv"><img src="./assets/images/image-retro-pcs.jpg" width="100" height="127"/></div>
-            <div class="imageDivDesc">01
-              Reviving Retro PCs
-              What happens when old PCs are given modern upgrades?
+    
+      <div class="rowTwo">    
+        <div class="col-9">      
+          <div class="row-two">
+            <div class="col-12" style="padding: 0;">
+              <img src="./assets/images/image-web-3-desktop.jpg" style="max-width: 100%;max-height: 100%;"/>
             </div>
-          </div>
-          <div class="lastFlexTwo">
-            <div class="imageDiv"><img src="./assets/images/image-top-laptops.jpg" width="100" height="127"/></div>
-            <div class="imageDivDesc">02
-              Top 10 Laptops of 2022
-              Our best picks for various needs and budgets.
+            <div class="col-12 mobile" style="padding: 0;">
+              <img src="./assets/images/image-web-3-mobile.jpg" style="max-width: 100%;max-height: 100%;"/>
             </div>
-          </div>
-          <div class="lastFlexThree">
-            <div class="imageDiv"><img src="./assets/images/image-gaming-growth.jpg" width="100" height="127"/></div>
-            <div class="imageDivDesc">03
-              The Growth of Gaming
-              How the pandemic has sparked fresh opportunities.
+            <div class="col-6 heading" style="font-size: xx-large;color: #00001A;">
+              <b>The Bright Future of Web 3.0?</b>
+            </div>
+            <div class="col-6 description" style="position: relative;color: #5E607A">
+              <div>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+              But is it really fulfilling its promise?</div>
+              <br/>
+              <button >READ MORE</button>
             </div>
           </div>
         </div>
+        <div class="col-3">
+          <div style="margin-bottom: 34px;"><b style="color: #E9AA52;font-size: xx-large;">New</b></div>
+          <div >
+            <div class="newHeading" >Hydrogen VS Electric Cars</div>
+            <div class="newDesc" >Will hydrogen-fueled cars ever catch up to EVs?</div>
+          </div>
+          <div style="border: 1px solid #5E607A;height: 0;"></div>
+          <div>
+            <div class="newHeading">The Downsides of AI Artistry</div>
+            <div class="newDesc">What are the possible adverse effects of on-demand AI image generation?</div>
+          </div>
+          <div style="border: 1px solid #5E607A;;"></div>
+          <div>
+            <div class="newHeading">Is VC Funding Drying Up?</div>
+            <div class="newDesc">Private funding by VC firms is down 50% YOY. We take a look at what that means.</div>
+          </div>
+        </div>
+        <div class="col-12 lastColumn">
+          <div class="last-flex">
+            <div class="lastFlexOne">
+              <div class="imageDiv"><img src="./assets/images/image-retro-pcs.jpg" width="100" height="127"/></div>
+              <div class="imageDivDesc">01
+                Reviving Retro PCs
+                What happens when old PCs are given modern upgrades?
+              </div>
+            </div>
+            <div class="lastFlexTwo">
+              <div class="imageDiv"><img src="./assets/images/image-top-laptops.jpg" width="100" height="127"/></div>
+              <div class="imageDivDesc">02
+                Top 10 Laptops of 2022
+                Our best picks for various needs and budgets.
+              </div>
+            </div>
+            <div class="lastFlexThree">
+              <div class="imageDiv"><img src="./assets/images/image-gaming-growth.jpg" width="100" height="127"/></div>
+              <div class="imageDivDesc">03
+                The Growth of Gaming
+                How the pandemic has sparked fresh opportunities.
+              </div>
+            </div>
+          </div>
+        </div>
+          
       </div>
-    </div>
+   
   
-  
+      <div class="row footer">
+        <div class="col-12">
+          <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Sailaja</a>.
+          </div>
+        </div>
+      </div>
+    
+    
+    
 </div>
-<div class="attribution">
-  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-  Coded by <a href="#">Sailaja</a>.
-</div>
+
   <!--Javascript for Toggle Menu-->
   <script>
-    var navItems=document.getElementById('nav-items')
+    var navItems=document.getElementById('nav-items');
+   
     function showMenu(){
       navItems.style.right="0";
     }
@@ -368,6 +401,9 @@
       navItems.style.right="-200px";
      
     }
+    
+    
+  
   </script>
 </body>
 </html>
