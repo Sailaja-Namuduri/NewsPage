@@ -38,6 +38,7 @@
     
     padding:10px
   }
+
   .menu-mobile{
     visibility: hidden
   }
@@ -79,10 +80,11 @@
     margin-bottom: 29px;
   }
   .col-6 button{
-  
+
+    
     position: absolute;
     bottom: 0;
-      width: 185px;
+    width: 185px;
     height: 48px;
     background: hsl(5, 85%, 63%);
     letter-spacing: 2px;
@@ -112,9 +114,7 @@
     padding: 0;
     padding-right: 30px;
   }
-  .two{
-    padding: 0;
-  }
+ 
   .row-two{
     height: 511px;
   }
@@ -179,12 +179,7 @@
     width: 100px;
     
   }
-  .footer{
-    
-   
-    
-    margin-top:130px;
-  }
+
   
   .attribution { font-size: 15px; text-align: center; background: hsl(228, 45%, 44%);}
       .attribution a { color: hsl(228, 17%, 94%); }
@@ -279,9 +274,6 @@
     flex-direction: column;
     
   }
-  .footer{
-    position: sticky;
-    bottom: 0;
-  }
+ 
   
   }
