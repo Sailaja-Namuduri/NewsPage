@@ -4,330 +4,122 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
-
+  <title>Frontend Mentor | News homepage</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | News homepage</title>
+<script src="script.js" defer></script>
+  
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    * {
-  box-sizing: border-box;
-  border: 0px solid red;
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
-  
-}
-   
-   [class*="col-"] {
-  float: left;
-  padding: 15px;
-}
-    .last-flex{
-      display: flex;
-      
-    }
-    
-    .col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-@media only screen and (max-width: 700px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100vw;
-  }
-}
-.rootDiv{
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-.menu-mobile{
-  visibility: hidden
-}
-.menu-close{
-  display: none;
-}
-.nav-items{
-  align-self: center;
-  position: absolute;
-  right: 0 ;
-  color: #5E607A;
-}
-.nav-items ul li{
-  display: inline-block;
-  position: relative;
-  list-style: none;
-  padding-right: 40px;
-}
-.nav-items ul li a{
-  text-decoration: none;
-}
-.nav-items ul li::after{
-  content: '';
-  width: 0%;
-  height: 2px;
-  background: #f44336;
-  display: block;
-  margin: auto;
-  transition: 0.5s;
-}
-.nav-items ul li:hover::after{
-  width: 100%;
-}
-.row-two .description .div{
-  margin-bottom: 29px;
-}
-.col-6 button{
-
-  position: absolute;
-  bottom: 0;
-    width: 185px;
-  height: 48px;
-  background: hsl(5, 85%, 63%);
-  letter-spacing: 2px;
-  color: #FFFDFA;
-  
-}
-.newHeading{
-  color: #FFFDFA;
-  font-size: 20px;
-  padding-bottom: 8px;
-  padding-top: 31px;
-}
-.newDesc{
-  color: #C5C6CE;
-  font-size: 15px;
-  padding-bottom: 29px;
-  border-bottom: #5E607A;;
-}
-.rowTwo .col-9{
-  border: 0px solid greenyellow;
-}
-.rowTwo .col-3{
-  background: #00001A;
-  max-height: 511px;
-  border:0px solid yellow
-}
-.col-9{
-  padding: 0;
-  padding-right: 30px;
-}
-.rowTwo{
-  padding: 0;
-}
-.row-two{
-  height: 511px;
-}
-
-.row-two .description,.row-two .heading{
-  padding: 0 ;
-}
-
-
-.row-two .col-6{
-  height: 130px;
-}
-.lastColumn{
-  padding: 0;
-  margin-top: 71px;
-  height: 129px;
-}
-.last-flex{
-  padding: 0;
-  gap:30px;
-}
-
-.row-two .col-12{
-  margin-bottom: 28px;
-}
-.imageDiv{
-  display: inline;
-  
-}
-.imageDivDesc{
-  display: inline;
-  text-align: left;
-
-}
-.lastFlexOne,.lastFlexTwo,.lastFlexThree{
-  display: flex;
-  gap:24px;
-  
-}
-.lastFlexOne .imageDiv{
-  width: 100px;
-  
-}
-@media(max-width:700px){
- .body{
-  width: 100vw;
-  overflow-x: hidden;
- }
- .rootDiv{
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-  .nav-items{
-    position: fixed;
-    background: #ffffff;
-    height: 100vh;
-    width: 200px;
-    top:0;
-    right:165px;
-    text-align: left;
-    z-index: 2;
-    transition: 1s;
-  }
-  .nav-items ul{
-    padding: 40px;
-  }
-  .nav-items ul li{
-    display: block;  
-    padding: 5px;
-  }
-  .menu-close{
-    padding-top: 10px;
-    padding-right: 10px;
-    cursor: pointer;
-    text-align: right;
-    display: block;
-  }
-  .menu-mobile{
-    
-  visibility: visible;
-  
-
-    position: absolute;
-    right: 0;
-    padding-top: 25px;
-  }
-  .row-two .heading{
-    height:120px;
-  }
-  .row-two .description{
-    height:176px;
-  }
-  .col-6 button{
-
-    
-    bottom: 0;
-    
-  }
-  .last-flex{
-  display: flex;
-  gap:32px;
-  flex-direction: column;
-  
-}
-}
-  </style>
+ 
 </head>
-<body>
-  <div class="rootDiv" style="position: relative;">
-    <div class="row"style="display: flex;">
-      <div class="col-1"><img src="./assets/images/logo.svg" width="64.09px" height="39.9px"/></div>
-      <div class="nav-items" id="nav-items">
-        <div class="menu-close" onclick="hideMenu()"><img src="./assets/images/icon-menu-close.svg"/></div>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">New</a></li>
-            <li><a href="#">Popular</a></li>
-            <li><a href="#">Trending</a></li>
-            <li><a href="#">Categories</a></li>
+<body >
+  <div class="rootDiv" style="position: relative;display: flex;flex-direction: column;gap: 30px;">
+
+     <div class="row first"style="display: flex;">
+        <div class="col-1"><img src="./assets/images/logo.svg" width="64.09px" height="39.9px"/></div>
+        <div class="nav-items" id="nav-items">
+          <div class="menu-close" onclick="hideMenu()"><img src="./assets/images/icon-menu-close.svg"/></div>
+          <ul id="unordered-items-list">
+            <li ><a href="#">Home</a></li>
+            <li ><a href="#">New</a></li>
+            <li ><a href="#">Popular</a></li>
+            <li ><a href="#">Trending</a></li>
+            <li ><a href="#">Categories</a></li>
           </ul>
         </div>
-      <div class="menu-mobile"  onclick="showMenu()">
-        <img src="./assets/images/icon-menu.svg"/>
-      </div>
-    </div>
-    <div class="rowTwo">    
-      <div class="col-9">      
-        <div class="row-two">
-          <div class="col-12" style="padding: 0;">
-            <img src="./assets/images/image-web-3-desktop.jpg" style="max-width: 100%;max-height: 100%;"/>
-          </div>
-          <div class="col-6 heading" style="font-size: xx-large;color: #00001A;">
-            <b>The Bright Future of Web 3.0?</b>
-          </div>
-          <div class="col-6 description" style="position: relative;color: #5E607A">
-            <div>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-            But is it really fulfilling its promise?</div>
-            <br/>
-            <button >READ MORE</button>
-          </div>
+        <div class="menu-mobile"  onclick="showMenu()">
+          <img src="./assets/images/icon-menu.svg"/>
         </div>
       </div>
-      <div class="col-3">
-        <div style="margin-bottom: 34px;"><b style="color: #E9AA52;font-size: xx-large;">New</b></div>
-        <div >
-          <div class="newHeading" >Hydrogen VS Electric Cars</div>
-          <div class="newDesc" >Will hydrogen-fueled cars ever catch up to EVs?</div>
-        </div>
-        <div style="border: 1px solid #5E607A;height: 0;"></div>
-        <div>
-          <div class="newHeading">The Downsides of AI Artistry</div>
-          <div class="newDesc">What are the possible adverse effects of on-demand AI image generation?</div>
-        </div>
-        <div style="border: 1px solid #5E607A;;"></div>
-        <div>
-          <div class="newHeading">Is VC Funding Drying Up?</div>
-          <div class="newDesc">Private funding by VC firms is down 50% YOY. We take a look at what that means.</div>
-        </div>
-      </div>
-      <div class="col-12 lastColumn">
-        <div class="last-flex">
-          <div class="lastFlexOne">
-            <div class="imageDiv"><img src="./assets/images/image-retro-pcs.jpg" width="100" height="127"/></div>
-            <div class="imageDivDesc">01
-              Reviving Retro PCs
-              What happens when old PCs are given modern upgrades?
+    
+      <div class="row two" >    
+        <div class="col-9">      
+          <div class="row-two">
+            <div class="col-12" style="padding: 0;">
+              <img src="./assets/images/image-web-3-desktop.jpg" style="max-width: 100%;max-height: 100%;"/>
             </div>
-          </div>
-          <div class="lastFlexTwo">
-            <div class="imageDiv"><img src="./assets/images/image-top-laptops.jpg" width="100" height="127"/></div>
-            <div class="imageDivDesc">02
-              Top 10 Laptops of 2022
-              Our best picks for various needs and budgets.
+            <div class="col-12 mobile" style="padding: 0;">
+              <img src="./assets/images/image-web-3-mobile.jpg" style="max-width: 100%;max-height: 100%;"/>
             </div>
-          </div>
-          <div class="lastFlexThree">
-            <div class="imageDiv"><img src="./assets/images/image-gaming-growth.jpg" width="100" height="127"/></div>
-            <div class="imageDivDesc">03
-              The Growth of Gaming
-              How the pandemic has sparked fresh opportunities.
+            <div class="col-6 heading" style="font-size: xx-large;color: #00001A;">
+              <b>The Bright Future of Web 3.0?</b>
+            </div>
+            <div class="col-6 description" style="position: relative;color: #5E607A">
+              <div>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+              But is it really fulfilling its promise?</div>
+              <br/>
+              <button id="read-more">READ MORE</button>
             </div>
           </div>
         </div>
+        <div class="col-3">
+          <div style="margin-bottom: 34px;"><b style="color: #E9AA52;font-size: xx-large;">New</b></div>
+          <div >
+            <div class="newHeading" >Hydrogen VS Electric Cars</div>
+            <div class="newDesc" >Will hydrogen-fueled cars ever catch up to EVs?</div>
+          </div>
+          <div style="border: 1px solid #5E607A;height: 0;"></div>
+          <div>
+            <div class="newHeading">The Downsides of AI Artistry</div>
+            <div class="newDesc">What are the possible adverse effects of on-demand AI image generation?</div>
+          </div>
+          <div style="border: 1px solid #5E607A;;"></div>
+          <div>
+            <div class="newHeading">Is VC Funding Drying Up?</div>
+            <div class="newDesc">Private funding by VC firms is down 50% YOY. We take a look at what that means.</div>
+          </div>
+        </div>
+        <div class="col-12 lastColumn">
+          <div class="last-flex">
+            <div class="lastFlexOne">
+              <div class="imageDiv"><img src="./assets/images/image-retro-pcs.jpg" width="100" height="127"/></div>
+              <div class="imageDivDesc">
+                <div class="number">01</div>
+                <div class="image-heading">Reviving Retro PCs</div>
+                <div class="image-description">What happens when old PCs are given modern upgrades?</div>
+              </div>
+            </div>
+            <div class="lastFlexTwo">
+              <div class="imageDiv"><img src="./assets/images/image-top-laptops.jpg" width="100" height="127"/></div>
+              <div class="imageDivDesc">
+                <div class="number">02</div>
+                <div class="image-heading">Top 10 Laptops of 2022</div>
+                <div class="image-description">Our best picks for various needs and budgets.</div>
+              </div>
+            </div>
+            <div class="lastFlexThree">
+              <div class="imageDiv"><img src="./assets/images/image-gaming-growth.jpg" width="100" height="127"/></div>
+              <div class="imageDivDesc">
+                <div class="number">03</div>
+                <div class="image-heading">The Growth of Gaming</div>
+                <div class="image-description">How the pandemic has sparked fresh opportunities.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+          
       </div>
-    </div>
+   
   
-  
+      <div class="row footer">
+        <div class="col-12" style="padding: 0;">
+          <div class="attribution" style="padding: 0;">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Sailaja</a>.
+          </div>
+        </div>
+        
+      </div>
+    
+    
+    
 </div>
+
   <!--Javascript for Toggle Menu-->
-  <script>
-    var navItems=document.getElementById('nav-items')
-    function showMenu(){
-      navItems.style.right="0";
-    }
-    function hideMenu(){
-      navItems.style.right="-200px";
-     
-    }
-  </script>
+  
 </body>
 </html>
